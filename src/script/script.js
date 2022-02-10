@@ -32,8 +32,7 @@ Validacpf.prototype.validar = function(){
     if(typeof this.cpfLimpo === 'undefined') return false;
     if(this.cpfLimpo.length !== 11) return false;
     if(this.isSequencia()) return false;
-
-
+    
     const cpfParcial = this.cpfLimpo.slice(0, -2)
     const toType = this.createDigite(cpfParcial)
     const toType2 = this.createDigite(cpfParcial + toType)

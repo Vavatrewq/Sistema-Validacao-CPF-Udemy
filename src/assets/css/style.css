@@ -1,0 +1,74 @@
+html,body{
+    padding: 0%;
+    margin: 0%;
+    font-family: sans-serif;
+    background-color: #115666;
+}
+
+:root{
+    --primary-color: #115666;
+    --primary-color-darker: #093038;
+}
+
+header{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    padding: 25px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px 1px  #093038;
+}
+
+.img-box{
+    background-image: url(../img/businessmen-connections.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+h1{
+    text-align: center;
+}
+
+.result{
+    font-size: 2em;
+    color: var(--primary-color);
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #093038;
+}
+
+.btn{
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.5em;
+    color:#ffff;
+    border: none;
+    border-radius: 10px;
+    background-color: #115666;
+    transition: 500ms;
+    box-shadow: 0px 0px 0px 2px #093038;
+}
+
+.btn:hover{
+    background-color: #093038;
+    box-shadow: 5px 5px 0px 0px black;
+}
+
+.box-btn{
+    display: flex;
+    flex-direction: column;
+}

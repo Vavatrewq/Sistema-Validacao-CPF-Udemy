@@ -1,0 +1,33 @@
+{
+  "name": "gerador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vavatrewq/Sistema-Validacao-CPF-Udemy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vavatrewq/Sistema-Validacao-CPF-Udemy/issues"
+  },
+  "homepage": "https://github.com/Vavatrewq/Sistema-Validacao-CPF-Udemy#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1",
+    "css-loader": "^6.6.0",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.3.1"
+  }
+}

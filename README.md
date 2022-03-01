@@ -3,9 +3,6 @@
 ### Sistema feito na aula do Luiz Otávio.
 ### foi usado Webpack/babel para trasformação do code /src.
 
-### Como Devo usar???
-#### Primeiro instala pacote Webpack lembrando que exigido uso do terminal.
-
 #### npm install
 #### npm run dev
 

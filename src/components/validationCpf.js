@@ -2,19 +2,10 @@ export default class ValidationCpf{
     constructor(cpfEnviar){
         Object.defineProperty(this, 'cpfClear', {
             enumerable:true,
-            configurable:false,
             get: function (){
                 return cpfEnviar.replace(/\D+/g, '');
             }
         })
-    };
-
-    geratorCpf(){
-        const parcial = this.cpfClear.slice(0, -2);
-        const digiteOne = ValidationCpf.createDigite(parcial);
-        const digitetwo = ValidationCpf.createDigite(parcial + digiteOne);
-
-        this.cpfNew = parcial + digiteOne + digitetwo;
     };
 
     validar(){
@@ -22,9 +13,14 @@ export default class ValidationCpf{
         if(typeof this.cpfClear !== 'string') return false;
         if(this.cpfClear.length !== 11) return false;
         if(this.isRepeat()) return false;
-        this.geratorCpf();
 
-        return this.cpfNew === this.cpfClear;
+        const parcial = this.cpfClear.slice(0, -2);
+        const digiteOne = ValidationCpf.createDigite(parcial);
+        const digitetwo = ValidationCpf.createDigite(parcial + digiteOne);
+
+        const completeCpf = parcial + digiteOne + digitetwo;
+
+        return completeCpf === this.cpfClear;
     };
 
     isRepeat(){

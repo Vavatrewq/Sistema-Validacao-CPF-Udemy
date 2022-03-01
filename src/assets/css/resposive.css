@@ -1,9 +1,14 @@
-@media only screen and (max-width: 850px)  {
-
+@media only screen and (max-width: 900px)  {
+    body, html{
+        background-color: #ffff;
+    }
     .contents{
-        width: 100%;
-        height:100%;
         border-radius: 0px;
+        box-shadow: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
         padding: 0;
     }
 
@@ -13,6 +18,11 @@
 
     .box-btn, .result{
         text-align: center;
-        width: 70%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contents-box{
+        padding: 0px 0px 0px 0px;
     }
 }

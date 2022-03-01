@@ -84,7 +84,6 @@ var ValidationCpf = /*#__PURE__*/function () {
 
     Object.defineProperty(this, 'cpfClear', {
       enumerable: true,
-      configurable: false,
       get: function get() {
         return cpfEnviar.replace(/\D+/g, '');
       }
@@ -92,22 +91,17 @@ var ValidationCpf = /*#__PURE__*/function () {
   }
 
   _createClass(ValidationCpf, [{
-    key: "geratorCpf",
-    value: function geratorCpf() {
-      var parcial = this.cpfClear.slice(0, -2);
-      var digiteOne = ValidationCpf.createDigite(parcial);
-      var digitetwo = ValidationCpf.createDigite(parcial + digiteOne);
-      this.cpfNew = parcial + digiteOne + digitetwo;
-    }
-  }, {
     key: "validar",
     value: function validar() {
       if (!this.cpfClear) return false;
       if (typeof this.cpfClear !== 'string') return false;
       if (this.cpfClear.length !== 11) return false;
       if (this.isRepeat()) return false;
-      this.geratorCpf();
-      return this.cpfNew === this.cpfClear;
+      var parcial = this.cpfClear.slice(0, -2);
+      var digiteOne = ValidationCpf.createDigite(parcial);
+      var digitetwo = ValidationCpf.createDigite(parcial + digiteOne);
+      var completeCpf = parcial + digiteOne + digitetwo;
+      return completeCpf === this.cpfClear;
     }
   }, {
     key: "isRepeat",
@@ -166,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media only screen and (max-width: 850px)  {\r\n\r\n    .contents{\r\n        width: 100%;\r\n        height:100%;\r\n        border-radius: 0px;\r\n        padding: 0;\r\n    }\r\n\r\n    .result{\r\n        font-size: 1.5em;\r\n    }\r\n\r\n    .box-btn, .result{\r\n        text-align: center;\r\n        width: 70%;\r\n    }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/assets/css/resposive.css"],"names":[],"mappings":"AAAA;;IAEI;QACI,WAAW;QACX,WAAW;QACX,kBAAkB;QAClB,UAAU;IACd;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,kBAAkB;QAClB,UAAU;IACd;AACJ","sourcesContent":["@media only screen and (max-width: 850px)  {\r\n\r\n    .contents{\r\n        width: 100%;\r\n        height:100%;\r\n        border-radius: 0px;\r\n        padding: 0;\r\n    }\r\n\r\n    .result{\r\n        font-size: 1.5em;\r\n    }\r\n\r\n    .box-btn, .result{\r\n        text-align: center;\r\n        width: 70%;\r\n    }\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media only screen and (max-width: 900px)  {\r\n    body, html{\r\n        background-color: #ffff;\r\n    }\r\n    .contents{\r\n        border-radius: 0px;\r\n        box-shadow: none;\r\n        flex-direction: column;\r\n        width: 100%;\r\n        height: 100%;\r\n        box-shadow: none;\r\n        padding: 0;\r\n    }\r\n\r\n    .result{\r\n        font-size: 1.5em;\r\n    }\r\n\r\n    .box-btn, .result{\r\n        text-align: center;\r\n        justify-content: center;\r\n        width: 100%;\r\n    }\r\n\r\n    .contents-box{\r\n        padding: 0px 0px 0px 0px;\r\n    }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/assets/css/resposive.css"],"names":[],"mappings":"AAAA;IACI;QACI,uBAAuB;IAC3B;IACA;QACI,kBAAkB;QAClB,gBAAgB;QAChB,sBAAsB;QACtB,WAAW;QACX,YAAY;QACZ,gBAAgB;QAChB,UAAU;IACd;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,kBAAkB;QAClB,uBAAuB;QACvB,WAAW;IACf;;IAEA;QACI,wBAAwB;IAC5B;AACJ","sourcesContent":["@media only screen and (max-width: 900px)  {\r\n    body, html{\r\n        background-color: #ffff;\r\n    }\r\n    .contents{\r\n        border-radius: 0px;\r\n        box-shadow: none;\r\n        flex-direction: column;\r\n        width: 100%;\r\n        height: 100%;\r\n        box-shadow: none;\r\n        padding: 0;\r\n    }\r\n\r\n    .result{\r\n        font-size: 1.5em;\r\n    }\r\n\r\n    .box-btn, .result{\r\n        text-align: center;\r\n        justify-content: center;\r\n        width: 100%;\r\n    }\r\n\r\n    .contents-box{\r\n        padding: 0px 0px 0px 0px;\r\n    }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -194,10 +188,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../img/businessmen-connections.png */ "./src/assets/img/businessmen-connections.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../img/search.png */ "./src/assets/img/search.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html,body{\r\n    padding: 0%;\r\n    margin: 0%;\r\n    font-family: sans-serif;\r\n    background-color: #115666;\r\n}\r\n\r\n:root{\r\n    --primary-color: #115666;\r\n    --primary-color-darker: #093038;\r\n}\r\n\r\nheader{\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.contents{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: #ffff;\r\n    padding: 25px;\r\n    width: 500px;\r\n    height: 500px;\r\n    border-radius: 10px;\r\n    box-shadow: 10px 10px 0px 1px  #093038;\r\n}\r\n\r\n.img-box{\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    width: 100px;\r\n    height: 100px;\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n}\r\n\r\n.result{\r\n    font-size: 2em;\r\n    color: var(--primary-color);\r\n    font-weight: bold;\r\n    letter-spacing: 5px;\r\n    border-bottom: 2px solid #093038;\r\n}\r\n\r\n.btn{\r\n    padding: 10px;\r\n    margin: 10px;\r\n    font-size: 1.5em;\r\n    color:#ffff;\r\n    border: none;\r\n    border-radius: 10px;\r\n    background-color: #115666;\r\n    transition: 500ms;\r\n    box-shadow: 0px 0px 0px 2px #093038;\r\n}\r\n\r\n.btn:hover{\r\n    background-color: #093038;\r\n    box-shadow: 5px 5px 0px 0px black;\r\n}\r\n\r\n.box-btn{\r\n    display: flex;\r\n    flex-direction: column;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,UAAU;IACV,uBAAuB;IACvB,yBAAyB;AAC7B;;AAEA;IACI,wBAAwB;IACxB,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;IACvB,uBAAuB;IACvB,aAAa;IACb,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,sCAAsC;AAC1C;;AAEA;IACI,yDAAyD;IACzD,4BAA4B;IAC5B,wBAAwB;IACxB,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,cAAc;IACd,2BAA2B;IAC3B,iBAAiB;IACjB,mBAAmB;IACnB,gCAAgC;AACpC;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,mBAAmB;IACnB,yBAAyB;IACzB,iBAAiB;IACjB,mCAAmC;AACvC;;AAEA;IACI,yBAAyB;IACzB,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B","sourcesContent":["html,body{\r\n    padding: 0%;\r\n    margin: 0%;\r\n    font-family: sans-serif;\r\n    background-color: #115666;\r\n}\r\n\r\n:root{\r\n    --primary-color: #115666;\r\n    --primary-color-darker: #093038;\r\n}\r\n\r\nheader{\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.contents{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: #ffff;\r\n    padding: 25px;\r\n    width: 500px;\r\n    height: 500px;\r\n    border-radius: 10px;\r\n    box-shadow: 10px 10px 0px 1px  #093038;\r\n}\r\n\r\n.img-box{\r\n    background-image: url(../img/businessmen-connections.png);\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    width: 100px;\r\n    height: 100px;\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n}\r\n\r\n.result{\r\n    font-size: 2em;\r\n    color: var(--primary-color);\r\n    font-weight: bold;\r\n    letter-spacing: 5px;\r\n    border-bottom: 2px solid #093038;\r\n}\r\n\r\n.btn{\r\n    padding: 10px;\r\n    margin: 10px;\r\n    font-size: 1.5em;\r\n    color:#ffff;\r\n    border: none;\r\n    border-radius: 10px;\r\n    background-color: #115666;\r\n    transition: 500ms;\r\n    box-shadow: 0px 0px 0px 2px #093038;\r\n}\r\n\r\n.btn:hover{\r\n    background-color: #093038;\r\n    box-shadow: 5px 5px 0px 0px black;\r\n}\r\n\r\n.box-btn{\r\n    display: flex;\r\n    flex-direction: column;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,body{\r\n    padding: 0%;\r\n    margin: 0%;\r\n    font-family: sans-serif;\r\n    background-color: #115666;\r\n}\r\n\r\n:root{\r\n    --primary-color: #115666;\r\n    --primary-color-darker: #093038;\r\n}\r\n\r\nheader{\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.contents{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    background-color: #ffff;\r\n    width: 80%;\r\n    height: 80%;\r\n    border-radius: 10px;\r\n    box-shadow: 10px 10px 0px 1px  #093038;\r\n}\r\n\r\n.contents-box{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.img-box{\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    width: 100px;\r\n    height: 100px;\r\n}\r\n\r\n.icon-gera{\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n}\r\n\r\n.icon-valid{\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n}\r\n\r\nh3{\r\n    color:#093038;\r\n    font-size: 25px;\r\n}\r\n\r\n.result{\r\n    font-size: 2em;\r\n    color: var(--primary-color);\r\n    font-weight: bold;\r\n    letter-spacing: 5px;\r\n    border-bottom: 2px solid #093038;\r\n}\r\n\r\n.valid{\r\n    padding: 10px;\r\n    font-size: 25px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.btn{\r\n    padding: 10px;\r\n    margin: 10px;\r\n    font-size: 1.5em;\r\n    color:#ffff;\r\n    border: none;\r\n    border-radius: 10px;\r\n    background-color: #115666;\r\n    transition: 500ms;\r\n    box-shadow: 0px 0px 0px 2px #093038;\r\n}\r\n\r\n.btn:hover{\r\n    background-color: #093038;\r\n    box-shadow: 5px 5px 0px 0px black;\r\n}\r\n\r\n.box-btn{\r\n    display: flex;\r\n    flex-direction: row;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,UAAU;IACV,uBAAuB;IACvB,yBAAyB;AAC7B;;AAEA;IACI,wBAAwB;IACxB,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,6BAA6B;IAC7B,uBAAuB;IACvB,UAAU;IACV,WAAW;IACX,mBAAmB;IACnB,sCAAsC;AAC1C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,4BAA4B;IAC5B,wBAAwB;IACxB,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,yDAAyD;AAC7D;;AAEA;IACI,yDAAwC;AAC5C;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,eAAe;AACnB;;AAEA;IACI,cAAc;IACd,2BAA2B;IAC3B,iBAAiB;IACjB,mBAAmB;IACnB,gCAAgC;AACpC;;AAEA;IACI,aAAa;IACb,eAAe;IACf,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,mBAAmB;IACnB,yBAAyB;IACzB,iBAAiB;IACjB,mCAAmC;AACvC;;AAEA;IACI,yBAAyB;IACzB,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,mBAAmB;AACvB","sourcesContent":["html,body{\r\n    padding: 0%;\r\n    margin: 0%;\r\n    font-family: sans-serif;\r\n    background-color: #115666;\r\n}\r\n\r\n:root{\r\n    --primary-color: #115666;\r\n    --primary-color-darker: #093038;\r\n}\r\n\r\nheader{\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.contents{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    background-color: #ffff;\r\n    width: 80%;\r\n    height: 80%;\r\n    border-radius: 10px;\r\n    box-shadow: 10px 10px 0px 1px  #093038;\r\n}\r\n\r\n.contents-box{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.img-box{\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    width: 100px;\r\n    height: 100px;\r\n}\r\n\r\n.icon-gera{\r\n    background-image: url(../img/businessmen-connections.png);\r\n}\r\n\r\n.icon-valid{\r\n    background-image: url(../img/search.png);\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n}\r\n\r\nh3{\r\n    color:#093038;\r\n    font-size: 25px;\r\n}\r\n\r\n.result{\r\n    font-size: 2em;\r\n    color: var(--primary-color);\r\n    font-weight: bold;\r\n    letter-spacing: 5px;\r\n    border-bottom: 2px solid #093038;\r\n}\r\n\r\n.valid{\r\n    padding: 10px;\r\n    font-size: 25px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.btn{\r\n    padding: 10px;\r\n    margin: 10px;\r\n    font-size: 1.5em;\r\n    color:#ffff;\r\n    border: none;\r\n    border-radius: 10px;\r\n    background-color: #115666;\r\n    transition: 500ms;\r\n    box-shadow: 0px 0px 0px 2px #093038;\r\n}\r\n\r\n.btn:hover{\r\n    background-color: #093038;\r\n    box-shadow: 5px 5px 0px 0px black;\r\n}\r\n\r\n.box-btn{\r\n    display: flex;\r\n    flex-direction: row;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -806,6 +802,16 @@ module.exports = styleTagTransform;
 
 module.exports = __webpack_require__.p + "7d59210a98cc0b45a40f.png";
 
+/***/ }),
+
+/***/ "./src/assets/img/search.png":
+/*!***********************************!*\
+  !*** ./src/assets/img/search.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "4b38585f08e48bfa83eb.png";
+
 /***/ })
 
 /******/ 	});
@@ -947,27 +953,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 /* harmony import */ var _assets_css_resposive_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/resposive.css */ "./src/assets/css/resposive.css");
 /* harmony import */ var _components_generatorCpf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/generatorCpf */ "./src/components/generatorCpf.js");
+/* harmony import */ var _components_validationCpf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/validationCpf */ "./src/components/validationCpf.js");
 
 
 
 
-(function () {
+
+function executeInfo() {
   var gerar = new _components_generatorCpf__WEBPACK_IMPORTED_MODULE_2__["default"]();
-  var result = document.querySelector('.result');
+  var result = document.querySelector('.result-gera');
+  var inputValid = document.querySelector('.valid');
+  var resultValid = document.querySelector('.result-valid');
   document.addEventListener('click', function (el) {
     var elements = el.target;
 
-    if (elements.classList.contains('btn')) {
+    if (elements.classList.contains('btn-gera')) {
       result.innerHTML = gerar.genereitorCpf();
     }
 
     ;
 
-    if (elements.classList.contains('clear')) {
+    if (elements.classList.contains('clear-gera')) {
       result.innerText = 'Seu CPF';
     }
+
+    if (elements.classList.contains('btn-valid')) {
+      var valid = new _components_validationCpf__WEBPACK_IMPORTED_MODULE_3__["default"](inputValid.value);
+
+      if (valid.validar()) {
+        resultValid.innerText = 'CPF Valido';
+      } else {
+        resultValid.innerText = 'CPF Invalido';
+      }
+    }
+
+    ;
+
+    if (elements.classList.contains('clear-valid')) {
+      inputValid.value = '';
+      resultValid.innerText = '';
+    }
   });
-})();
+}
+
+executeInfo();
 })();
 
 /******/ })()

@@ -20,27 +20,43 @@ header{
 
 .contents{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: #ffff;
-    padding: 25px;
-    width: 500px;
-    height: 500px;
+    width: 80%;
+    height: 80%;
     border-radius: 10px;
     box-shadow: 10px 10px 0px 1px  #093038;
 }
 
+.contents-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .img-box{
-    background-image: url(../img/businessmen-connections.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100px;
     height: 100px;
 }
 
+.icon-gera{
+    background-image: url(../img/businessmen-connections.png);
+}
+
+.icon-valid{
+    background-image: url(../img/search.png);
+}
+
 h1{
     text-align: center;
+}
+
+h3{
+    color:#093038;
+    font-size: 25px;
 }
 
 .result{
@@ -49,6 +65,12 @@ h1{
     font-weight: bold;
     letter-spacing: 5px;
     border-bottom: 2px solid #093038;
+}
+
+.valid{
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
 }
 
 .btn{
@@ -70,5 +92,5 @@ h1{
 
 .box-btn{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }

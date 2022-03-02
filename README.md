@@ -3,7 +3,7 @@
 ### Sistema feito na aula do Luiz Otávio.
 ### foi usado Webpack/babel para trasformação do code /src.
 
-#### npm install
+#### npm install ou i
 #### npm run dev
 
 #### Funcionalidades
